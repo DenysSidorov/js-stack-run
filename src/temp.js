@@ -1,1 +1,1 @@
-export default a = 5;
+export const a = 5;
