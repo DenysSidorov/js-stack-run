@@ -1,4 +1,7 @@
 const webpack = require('webpack');
+var path = require('path');
+
+const HtmlWebPackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   entry: './src/index.js',
@@ -10,6 +13,11 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.css$/,
+        // exclude: /node_modules/,
+        use: ["style-loader", "css-loader"]
+      },
+      {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: ['babel-loader']
@@ -17,10 +25,11 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['*', '.js', '.jsx']
+    extensions: ['*', '.js', '.jsx', '.css']
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    // htmlWebpackPlugin
   ],
   devServer: {
     // to serve the files from
