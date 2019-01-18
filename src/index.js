@@ -1,9 +1,11 @@
+import 'babel-polyfill';
 import {a} from './temp';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
 import './index.css' ;
 import './test.scss' ;
+
 const title = 'Minimal React Webpack Babel Setup';
 
 ReactDOM.render(
