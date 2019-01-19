@@ -23,6 +23,7 @@ module.exports = {
   "rules":{
     "react/jsx-filename-extension": [WARN, { "extensions": [".js", ".jsx"] }],
     "react/jsx-indent": [OFF],
-    "prettier/prettier": "error"
+    "prettier/prettier": "error",
+    "no-console": OFF
   }
 };

@@ -10,3 +10,6 @@ function prop() {
 })();
 
 export default a;
+
+const qqq = 12;
+console.log(qqq);
