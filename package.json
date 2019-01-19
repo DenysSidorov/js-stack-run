@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run eslint --fix src/**/*.js && webpack-dev-server --config ./webpack.config.js --mode development",
-    "build": "webpack --mode production",
+    "build": "eslint src/**/*.js && webpack --mode production",
     "eslint": "eslint src/**/*.js",
+    "eslint-fix": "eslint src/**/*.js --fix",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Denys Sidorov",
