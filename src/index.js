@@ -7,8 +7,7 @@ import './index.css';
 import './test.scss';
 
 const title = 'Minimal React Webpack Babel Setup';
-const aa = 5;
-console.log(aa);
+
 const TestComp = () => <div className="title">{title}</div>;
 
 ReactDOM.render(<TestComp />, document.getElementById('app'));
