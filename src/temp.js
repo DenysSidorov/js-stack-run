@@ -1,13 +1,15 @@
-export const a = 5;
+let a = 5;
 
 function prop() {
   return Promise.resolve(5);
 }
 
 async function getResult() {
-  let result = await prop();
+  const result = await prop();
   console.log(result);
 }
 
 
 getResult();
+
+export default a;

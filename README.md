@@ -10,3 +10,4 @@ todo in next releases:
 - update css/js version in names for user's caches
 - images, fonts support
 - add UglifyJsPlugin 
+- source maps for development
