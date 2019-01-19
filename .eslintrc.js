@@ -1,6 +1,6 @@
 const OFF = 0, WARN = 1, ERROR = 2;
 module.exports = {
-  "extends": ["airbnb"],
+  "extends": ["airbnb", "prettier"],
   "parser": "babel-eslint",
   "parserOptions": {
     "ecmaVersion": 9,
@@ -14,13 +14,15 @@ module.exports = {
       arrowFunction: true
     }
   },
-  "plugins": ["react"],
+  "plugins": ["react", "prettier"],
   "env": {
     "es6": true,
-    "browser": true
+    "browser": true,
+    "node": true,
   },
   "rules":{
     "react/jsx-filename-extension": [WARN, { "extensions": [".js", ".jsx"] }],
     "react/jsx-indent": [OFF],
+    "prettier/prettier": "error"
   }
 };

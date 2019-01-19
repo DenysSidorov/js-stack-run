@@ -1,35 +1,35 @@
 const webpack = require('webpack');
-var path = require('path');
+// const path = require('path');
 
-const HtmlWebPackPlugin = require("html-webpack-plugin");
+// const HtmlWebPackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: ["babel-polyfill", './src/index.js'],
+  entry: ['babel-polyfill', './src/index.js'],
   output: {
-    path: __dirname + '/www',
+    path: `${__dirname}/www`,
     publicPath: '/',
-    filename: 'bundle.js'
+    filename: 'bundle.js',
   },
   module: {
     rules: [
       {
         test: /\.css$/,
         // exclude: /node_modules/,
-        use: ["style-loader", "css-loader"]
+        use: ['style-loader', 'css-loader'],
       },
       {
         test: /\.scss$/,
-        use: ["style-loader", "css-loader", "postcss-loader", "sass-loader"]
+        use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
       },
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: ['babel-loader']
-      }
-    ]
+        use: ['babel-loader'],
+      },
+    ],
   },
   resolve: {
-    extensions: ['*', '.js', '.jsx', '.css']
+    extensions: ['*', '.js', '.jsx', '.css'],
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
@@ -38,6 +38,6 @@ module.exports = {
   devServer: {
     // to serve the files from
     contentBase: './www',
-    hot: true
-  }
+    hot: true,
+  },
 };
