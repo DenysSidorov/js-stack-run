@@ -1,7 +1,4 @@
 const webpack = require('webpack');
-// const path = require('path');
-
-// const HtmlWebPackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: ['babel-polyfill', './src/index.js'],
@@ -31,13 +28,12 @@ module.exports = {
   resolve: {
     extensions: ['*', '.js', '.jsx', '.css'],
   },
-  plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-    // htmlWebpackPlugin
-  ],
+  plugins: [new webpack.HotModuleReplacementPlugin()],
   devServer: {
     // to serve the files from
     contentBase: './www',
     hot: true,
   },
 };
+
+// "build": "npm run eslint && webpack --mode production"

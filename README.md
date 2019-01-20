@@ -9,5 +9,5 @@ todo in next releases:
 - environment for tests
 - update css/js version in names for user's caches
 - images, fonts support
-- add UglifyJsPlugin 
+- add build mode  
 - source maps for development
